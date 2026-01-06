@@ -1,0 +1,150 @@
+Topshiriqlar:
+
+
+1️⃣ Employees jadvali bo‘yicha
+
+employees jadvalidan faqat first_name va salary ustunlarini chiqaring.
+
+employees jadvalidagi salary 5000 dan katta bo‘lgan xodimlarni chiqaring.
+
+employees jadvalidagi xodimlarni last_name bo‘yicha A–Z tartibida saralang.
+
+employees jadvalidagi eng oxirgi 5 ta xodimni employee_id bo‘yicha kamayish tartibida chiqaring.
+
+employees jadvalidan ismi “A” harfi bilan boshlanadigan xodimlarni toping.
+
+employees jadvalidan ismi “n” harfi bilan tugaydigan xodimlarni chiqaring.
+
+employees jadvalidan job_id = 5 yoki 9 bo‘lgan xodimlarni toping.
+
+employees jadvalidan salary 3000 va 8000 oralig‘ida bo‘lgan xodimlarni chiqaring.
+
+employees jadvalidan manager_id NULL bo‘lgan xodimlarni toping.
+
+employees jadvalidan birinchi 3 ta xodimni chiqaring.
+
+2️⃣ Jobs jadvali bo‘yicha
+
+jobs jadvalidan job_title va min_salary ustunlarini chiqaring.
+
+jobs jadvalidan max_salary 12000 dan katta bo‘lgan ishlarni toping.
+
+jobs jadvalidan min_salary va max_salary o‘rtasidagi farqni chiqaring.
+
+jobs jadvalidan job_title ichida “Manager” so‘zi qatnashgan ishlarni toping.
+
+jobs jadvalidan salary oralig‘i 4000–9000 bo‘lgan ishlarni chiqaring.
+
+3️⃣ Countries jadvali bo‘yicha
+
+countries jadvalidan region_id = 1 bo‘lgan davlatlarni toping.
+
+countries jadvalidan region_id 2 yoki 4 ga tegishli bo‘lgan davlatlarni chiqaring.
+
+countries jadvalidan region_id 3 ga tegishli bo‘lmagan davlatlarni toping.
+
+countries jadvalidan country_name A harfi bilan boshlanadigan davlatlarni chiqaring.
+
+countries jadvalidan faqat 5 ta davlatni chiqaring.
+
+4️⃣ Aralash
+
+employees jadvalidan salary 6000 dan katta, ismi “S” bilan boshlanadigan xodimlarni toping.
+
+employees jadvalidan job_id 3, 5, 7 ga teng bo‘lmagan xodimlarni chiqaring.
+
+employees jadvalidan salary bo‘yicha eng yuqori 10 ta xodimni chiqaring.
+
+jobs jadvalidan eng katta max_salary ga ega ishni toping.
+
+employees jadvalidan last_name bo‘yicha Z–A tartibida, faqat 7 ta xodimni chiqaring.
+
+
+
+
+
+SQL da:
+
+
+
+-- SELECT first_name, salary FROM employees
+
+-- SELECT * FROM employees
+-- WHERE salary>5000
+
+-- SELECT * FROM employees
+-- ORDER BY last_name ASC
+
+-- SELECT * FROM employees
+-- ORDER BY employee_id DESC
+-- LIMIT 5
+
+-- SELECT * FROM employees
+-- WHERE first_name LIKE 'A%'
+
+-- SELECT * FROM employees
+-- WHERE first_name like '%n'
+
+-- SELECT * FROM employees
+-- WHERE job_id IN (5,9)
+
+-- SELECT * FROM employees
+-- WHERE salary BETWEEN 3000 AND 8000
+
+-- SELECT * FROM employees
+-- WHERE manager_id IS NULL
+
+-- SELECT * FROM employees
+-- LIMIT 3
+
+
+
+-- SELECT job_title, min_salary FROM jobs
+
+-- SELECT * FROM jobs
+-- WHERE max_salary > 12000
+
+-- SELECT job_title, (max_salary - min_salary) AS salary_diff
+-- FROM jobs;
+
+-- SELECT * FROM jobs
+-- WHERE job_title LIKE '%Manager%'
+
+-- SELECT *
+-- FROM jobs
+-- WHERE min_salary >= 4000 AND max_salary <= 9000;
+
+
+-- SELECT * FROM countries
+-- WHERE region_id = 1
+
+-- SELECT * FROM countries
+-- WHERE region_id IN (2, 4)
+
+-- SELECT * FROM countries
+-- WHERE region_id != 3
+
+-- SELECT * FROM countries
+-- WHERE country_name LIKE 'A%'
+
+-- SELECT * FROM countries
+-- LIMIT 5
+
+-- SELECT * FROM employees
+-- WHERE salary > 6000
+-- AND first_name LIKE 'S%'
+
+-- SELECT * FROM employees
+-- WHERE job_id NOT IN (3, 5, 7)
+
+-- SELECT * FROM employees
+-- ORDER BY salary DESC
+-- LIMIT 10
+
+-- SELECT * FROM jobs
+-- ORDER BY max_salary DESC
+-- LIMIT 1
+
+-- SELECT * FROM employees
+-- ORDER BY last_name DESC
+-- LIMIT 7
